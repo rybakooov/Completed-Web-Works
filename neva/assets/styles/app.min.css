@@ -86,6 +86,10 @@ ul {
       box-shadow: 0 0 0 0 rgba(0, 97, 39, 0.2);
   }
 }
+
+.maparea > svg > *{
+	background: transparent;
+}
 .maparea__img{
 	-webkit-transform: rotate(-30deg);
 	    -ms-transform: rotate(-30deg);
