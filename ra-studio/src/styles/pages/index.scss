@@ -1,0 +1,294 @@
+.compare{
+  padding: 70px 20px 0;
+  box-sizing: border-box;
+  max-width: 1440px;
+  margin: 0 auto;
+  font-family: 'Avenir Next Cyr';
+  &-top{
+    display: flex;
+    width: 100%;  
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px 14px;
+    &__title{
+      font-size: 36px;
+      line-height: 66px;
+      font-weight: normal;
+      &_red{
+        color: #E01839;
+      }
+      &_bold{
+        font-weight: 500;
+      }
+    }
+    &__btn{
+      border: 2px solid #E01839;
+      box-sizing: border-box;
+      border-radius: 10px;
+      padding: 21px 0 20px;
+      text-align: center;
+      max-width: 276px;
+      width: 100%;
+      color: #E01839;
+      font-size: 18px;
+      line-height: 24px;
+      user-select: none;
+      &:hover{
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+      }
+      &:active{
+        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+      }
+    }
+  }
+  &-main{
+    &-match{
+      display: none;
+    }
+    &-wrap{
+      &-top{
+        padding: 46px 60px 40px;
+        border-bottom: 0.5px solid #878787;
+        &__title{
+          margin-bottom: 27px;
+          font-size: 24px;
+          font-weight: 500;
+        }
+        &__subtitle{
+          font-size: 18px;
+        }
+      }
+      &-container{
+        padding: 0 60px 82px;
+        &-th{
+          display: flex;
+          align-items: center;
+          margin-bottom: 69px;
+          padding-top: 34px;
+          .compare-main-wrap-container__td{
+            font-size: 24px;
+          }
+        }
+        &-tr{
+          display: flex;
+          align-items: center;
+          padding: 21px 0;
+          .compare-main-wrap-container__td{
+            font-size: 18px;
+          }
+        }
+        &__td{
+          text-align: center;
+          width: 15%;
+          display: block;
+          &0{
+            width: 25%;
+            text-align: left;
+          }
+        }
+      }
+    }
+    &[data-compare-main-condition=second]{
+      .compare-main{
+        &-wrap{
+          &-top{
+            margin: 0 auto;
+            padding: 40px 0px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+          }
+          &-container{
+            padding: 0 0 80px;
+            &-th{
+              display: none;
+            }
+            &-tr{
+              margin: 0 -20px;
+            }
+            &__td{
+              text-align: left;
+              margin: 0 20px;
+              padding-right: 20px;
+              box-sizing: border-box;
+              span{
+                font-size: 18px;
+              }
+            }
+          }
+        }
+        &-match{
+          display: flex;
+          justify-content: center;
+          position: relative;
+          padding-top: 107px;
+          margin: 0 -20px;
+          &__add{
+            position: absolute;
+            &:hover{
+              cursor: pointer;
+            }
+          }
+          &-select{
+            position: relative;
+            z-index: 10;
+            margin: 0 20px;
+            &[data-select="hidden"]{
+              display: none;
+            }
+            &[data-select="visible"]{
+              display: block;
+            }
+            .top-select{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 276px;
+              height: 69px;
+              box-sizing: border-box;
+              border: 1px solid #626262;
+              border-radius: 10px;
+              background-color: white;
+              &[data-top-active="active"]{
+                box-shadow: 0px 0px 4px #E01839;
+              }
+              &:hover{
+                border: 1px solid #000000;
+                cursor: pointer;
+              }
+              
+              &__p{
+                margin-right: 9.5px;
+                font-family: 'Avenir Next Cyr';
+                font-size: 18px;
+                line-height: 33px;
+              }
+            }
+            .bot-select{
+              position: absolute;
+              padding-top: 20px;
+              top: 49px;
+              border: 1px solid #000000;
+              border-radius: 10px;
+              width: 100%;
+              box-sizing: border-box;
+              background-color: white;
+              z-index: -5;
+              &[data-bot-select="hidden"]{
+                display: none;
+              }
+              &[data-bot-select="visible"]{
+                display: block;
+              }
+              .empty-opt{
+                height: 20px;
+              }
+              .option{
+                width: 100%;
+                padding: 8px 0;
+                font-size: 18px;
+                line-height: 24px;
+                font-family: 'Avenir Next Cyr';
+                text-align: center;
+                &[data-disabled="disabled"]{
+                  display: none;
+                }
+                &:hover{
+                  background: rgba(224, 24, 57, 0.1);
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &-bot{
+    padding-bottom: 100px;
+    &__title{
+      text-align: center;
+      font-size: 36px;
+      font-family: 'Avenir Next Cyr';
+      margin-bottom: 80px;
+      font-weight: 500;
+    }
+    &-container{
+      display: flex;
+      align-items: center;
+      &-wrap{
+        width: 50%;
+        &__img{
+          margin: 0 auto;
+          display: block;
+          max-width: 100%;
+        }
+      }
+      &-form{
+        width: 50%;
+        &__title{
+          padding: 0 0 30px;
+          font-family: 'Avenir Next Cyr';
+          font-size: 24px;
+        }
+        &-wrap{
+          max-width: 544px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          .input-half{
+            width: calc(50% - 10px);
+            margin-bottom: 20px;
+          }
+          input, textarea{
+            display: block;
+            padding: 15px 20px;
+            font-family: 'Avenir Next Cyr';
+            font-size: 14px;
+            background: #FFFFFF;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            box-sizing: border-box;
+            border-radius: 5px;
+            &:hover{
+              box-shadow: 0px 0px 5px rgba(110, 24, 102, 0.25);
+            }
+          }
+          .textarea-full{
+            width: 100%;
+            resize: none;
+            height: 110px;
+          }
+          .submit{
+            display: flex;
+            width: 100%;
+            padding-top: 30px;
+            align-items: center;
+            &__btn{
+              font-family: 'Avenir Next Cyr';
+              font-size: 14px;
+              padding: 18px 10px;
+              box-sizing: border-box;
+              width: 154px;
+              margin-right: 20px;
+              background: #E01839;
+              border-radius: 5px;
+              color: white;
+              border: none;
+            }
+            &__conf{
+              display: block;
+              font-family: 'Avenir Next Cyr';
+              font-size: 14px;
+              line-height: normal;
+              color: rgba(0, 0, 0, 0.7);
+            }
+          }
+          
+        }
+      }
+    }
+  }
+}
+
