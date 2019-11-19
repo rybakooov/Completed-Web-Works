@@ -1,0 +1,315 @@
+.contacts{
+  padding-top: 135px;
+  
+  .general__title{
+    margin-bottom: 100px;
+  }
+  &-wrap{
+    &-flex{
+      display: flex;
+    }
+    max-width: 1200px;
+    box-sizing: border-box;
+    padding: 0 20px 80px;
+    margin: 0 auto;
+    &-desc{
+      flex: 2 1 calc(100% - 650px);
+      display: flex;
+      flex-direction: column;
+      padding: 10px 20px 10px 0;
+      box-sizing: border-box;
+      &__when{
+        font-size: 16px;
+        line-height: 150%;
+        color: rgba(0, 0, 0, 0.75);
+        margin-bottom: auto;
+        display: block;
+      }
+      &__link{
+        display: block;
+        position: relative;
+        
+        svg{
+          position: absolute;
+          left: 0;
+          top: 3px;
+        }
+        .contacts-wrap-desc__subtitle{
+          font-size: 14px;
+          line-height: 150%;
+          color: rgba(0, 0, 0, 0.5);
+          margin-top: 6px;
+        }
+        a, p{
+          display: block;
+          padding-left: 42px;
+          font-size: 16px;
+          line-height: 150%;
+          color: rgba(0, 0, 0, 0.75);
+        }
+        &:not(:last-child){
+          margin-bottom: 32px;
+        }
+        &:first-child{
+          margin-top: auto;
+        }
+      }
+    }
+    &-map{
+      max-width: 650px;
+      flex: 1 2 650px;
+      height: 460px;
+    }
+  }
+  &-bottom{
+
+    background-image: url('../images/callOrder-bg.png');
+    background-position:  bottom center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    &-form{
+      display: flex;
+      padding-bottom: 300px;
+      max-width: 1200px;
+      padding: 0 20px 300px;
+      flex-wrap: wrap;
+      margin: 0 auto;
+      align-items: flex-end;
+      &__title{
+        display: block;
+        width: 100%;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 150%;
+        color: rgba(0, 0, 0, 0.75);
+      }
+    }
+    &-left{
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 0 10px 0 0;
+      margin: 0 auto;
+      flex: 1 1 50%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      &-item{
+        width: calc(50% - 10px);
+        position: relative;
+        input:focus + label, textarea:focus + label, textarea:not(:empty) + label, input:not(:empty) + label{
+          top: 0;
+          color: rgba(0, 0, 0, 0.35);
+          font-size: 10px;
+        }
+        label{
+          cursor: 	text;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transition: .3s;
+          transform: translateY(-50%);
+          font-size: 12px;
+          line-height: 150%;
+          color: rgba(0, 0, 0, 0.5);
+        }
+        input{
+          width: 100%;
+          background: transparent;
+        }
+        &_text{
+          margin-top: 20px;
+          flex: 1 1 100%;
+          textarea{
+            width: 100%;
+            background: transparent;
+          }
+        }
+      }
+    }
+    &-right{
+      flex: 1 1 50%;
+      display: flex;
+      align-items: center;
+      padding: 0 0 0 10px;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      &__submit{
+        margin-right: 20px;
+      }
+      &__text{
+        font-size: 12px;
+        line-height: 125%;
+        color: rgba(0, 0, 0, 0.8);
+      }
+    }
+  }
+}
+@include w1024 {
+  .contacts-wrap-map{
+    max-width: 550px;
+  }
+}
+
+@include w768 {
+  .contacts-wrap-desc__link a, .contacts-wrap-desc__link p{
+    padding-left: 32px;
+  }
+  .contacts-wrap-map{
+    max-width: 382px;
+    height: 261px;
+    width: 100%;
+  }
+  .contacts-wrap-desc__when{
+    margin-bottom: 70px;
+  }
+  .contacts-wrap-desc{
+    padding: 0 20px 0 0;
+  }
+  .contacts-wrap-desc__link:not(:last-child){
+    margin-bottom: 30px;
+  }
+  .contacts-wrap-flex{
+    position: relative;
+  }
+  .contacts-wrap-desc__link_mail{
+    position: absolute;
+    top: 300px;
+    right: 0px;
+    max-width: 382px;
+    display: block;
+    width: 100%;
+  }
+  .contacts{
+    padding-top: 70px;
+  }
+  .contacts .general__title{
+    margin-bottom: 45px;
+  }
+  .contacts-bottom-form{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .contacts-bottom-left, .contacts-bottom-right{
+    flex: none;
+    width: 100%;
+  }
+  .contacts-bottom-right__text{
+    max-width: 261px;
+  }
+  .contacts-bottom-left{
+    padding-right: 0;
+    &-item_text{
+      margin-top: 10px;
+    }
+  }
+  .contacts-bottom-right{
+    padding-left: 0;
+    margin-top: 45px;
+  }
+  .contacts-bottom-form{
+    padding-bottom: 187px;
+  }
+}
+@include w480{
+  .contacts{
+    padding-top: 45px;
+    .general__title{
+      margin-bottom: 62px;
+    }
+  }
+  .contacts-wrap-desc__link_mail{
+    position: relative;
+    top: 0;
+    right: 0;
+    max-width: none;
+    order: 3;
+  }
+  .contacts-wrap-flex{
+    flex-direction: column-reverse;
+  }
+  .contacts-wrap-map{
+    padding-top: 78px;
+    height: 205px;
+    flex: none;
+    margin-bottom: 37px;
+    width: 100%;
+    max-width: none;
+  }
+  .contacts-wrap-desc__when{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    font-size: 14px;
+  }
+  .contacts-wrap{
+    padding: 0 20px;
+  }
+  .contacts-wrap-desc{
+    padding-right: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 60px;
+  }
+  .contacts-inst .contacts-wrap-desc__link{
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .contacts-wrap-desc__link_half{
+    order: 2;
+    box-sizing: border-box;
+    &:first-child{
+      padding-right: 10px;
+    }
+    width: 50%;
+  }
+  .contacts-wrap-desc__link svg{
+    top: 5px;
+  }
+  .contacts-bottom-form{
+    padding: 0 20px 60px;
+  }
+  .contacts-bottom-left-item{
+    width: 100%;
+    flex: none;
+  }
+  .contacts-bottom-left-item{
+    margin-top: 10px;
+  }
+  .contacts-bottom-left_item{
+    padding: 18px 0;
+  }
+  .contacts-bottom-right{
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .contacts-bottom-right__submit{
+    margin-bottom: 15px;
+    margin-right: 0;
+    max-width: none;
+  }
+  .contacts-bottom-right__text{
+    max-width: none;
+    font-size: 10px;
+  }
+  .contacts-wrap-desc__link a, .contacts-wrap-desc__link p{
+    font-size: 14px;
+  }
+  .contacts-bottom-form__title{
+    font-size: 18px;
+  }
+  .contacts-wrap-desc__link .contacts-wrap-desc__subtitle{
+    font-size: 12px;
+  }
+  
+}
+@include w320{
+  .contacts-wrap{
+    padding: 0 10px;
+  }
+  .contacts-bottom-form{
+    padding: 0 10px 60px;
+  }
+}

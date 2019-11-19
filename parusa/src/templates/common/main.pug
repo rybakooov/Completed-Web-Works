@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel="stylesheet", href="assets/styles/app.min.css")
+    script(src="assets/scripts/jquery.min.js")
+    script(src="assets/scripts/supaform.js")
+    script(src="assets/scripts/slick.min.js")
+    script(src="assets/scripts/main.js")
+    script(src="https://api-maps.yandex.ru/2.1/?apikey=6f18ee74-899f-460d-958f-dc0ae844847e&lang=ru_RU" type="text/javascript")
+    title 
+      block title
+  body
+    <svg class="svg-gradient">
+      <defs>
+        <linearGradient id="paint0_linear" x1="1.25" y1="0" x2="1.25" y2="2.5" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#54A5E2"/>
+        <stop offset="1" stop-color="#3382BE"/>
+        </linearGradient>
+      </defs>
+    </svg>
+    include ../common/quality.pug
+    include ../common/header.pug
+    
+    block content
+    include ../common/footer.pug

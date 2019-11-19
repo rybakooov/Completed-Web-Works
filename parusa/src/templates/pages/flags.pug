@@ -1,0 +1,80 @@
+extends ../common/main.pug  
+block title
+  | Флаги и флагштоки | ГК "Паруса"
+block content
+  section.items.flags
+    - var banner__title = 'Флаги и флагштоки'
+    - var banner__text = ' Презентации автомобилей, имиджевые меропрятия, задники бара, свадебные фото зоны, тематические фото зоны'
+    - var background__url = 'assets/images/flags.png'
+      include ../common/itemBanner.pug
+      .press
+        .press-ny
+          h4.press__title Виды конструкций
+          .press-wrap
+            .press-wrap-arrows
+              .press-wrap-arrows__prev
+                img(src="assets/images/arr-slider.svg", alt="")
+              .press-wrap-arrows__next
+                img(src="assets/images/arr-slider.svg", alt="")
+            .press-slider
+              .press-slider-item
+                .press-slider-item-img
+                  img(src="assets/images/parus.png", alt="")
+                .press-slider-item-desc
+                  h6.press-slider-item-desc__name Тритикс
+                  .press-slider-item-desc-items
+                    .press-slider-item-desc-item
+                      p.press-slider-item-desc-item__title Типовые размеры:
+                      p.press-slider-item-desc-item__text 2х2 м, 2,5х3 м, 3х4 м
+                    .press-slider-item-desc-item
+                      p.press-slider-item-desc-item__title Стоимость: 
+                      p.press-slider-item-desc-item__text от 8000 руб
+                    .press-slider-item-desc-item
+                      p.press-slider-item-desc-item__title Срок изготовления
+                      p.press-slider-item-desc-item__text от 1 дня
+                  a(href="#").general__btn.press-slider-item-desc__btn Рассчитать стоимость
+              .press-slider-item
+                .press-slider-item-img
+                  img(src="assets/images/parus.png", alt="")
+                .press-slider-item-desc
+                  h6.press-slider-item-desc__name Беливикс
+                  .press-slider-item-desc-items
+                    .press-slider-item-desc-item
+                      p.press-slider-item-desc-item__title Типовые размеры:
+                      p.press-slider-item-desc-item__text 2х2 м, 2,5х3 м, 3х4 м
+                    .press-slider-item-desc-item
+                      p.press-slider-item-desc-item__title Стоимость: 
+                      p.press-slider-item-desc-item__text от 8000 руб
+                    .press-slider-item-desc-item
+                      p.press-slider-item-desc-item__title Срок изготовления
+                      p.press-slider-item-desc-item__text от 1 дня
+                  a(href="#").general__btn.press-slider-item-desc__btn Рассчитать стоимость
+              .press-slider-item
+                .press-slider-item-img
+                  img(src="assets/images/parus.png", alt="")
+                .press-slider-item-desc
+                  h6.press-slider-item-desc__name Энчантикс
+                  .press-slider-item-desc-items
+                    .press-slider-item-desc-item
+                      p.press-slider-item-desc-item__title Типовые размеры:
+                      p.press-slider-item-desc-item__text 2х2 м, 2,5х3 м, 3х4 м
+                    .press-slider-item-desc-item
+                      p.press-slider-item-desc-item__title Стоимость: 
+                      p.press-slider-item-desc-item__text от 8000 руб
+                    .press-slider-item-desc-item
+                      p.press-slider-item-desc-item__title Срок изготовления
+                      p.press-slider-item-desc-item__text от 1 дня
+                  a(href="#").general__btn.press-slider-item-desc__btn Рассчитать стоимость
+      include ../common/whyWe.pug
+      .dopoln
+        h4.dopoln__title Дополнительная обработка
+        .dopoln-wrap
+          .dopoln-wrap-img
+          .dopoln-wrap-desc
+            h6.dopoln-wrap-desc__title Blackout флаг
+            p.dopoln-wrap-desc__text 100 % полиэфирная ткань двойного сатинового переплетения с однонаправленной сердцевиной (черная нить, переплетенная с обеих сторон белой нитью). Секрет ткани — способность не пропускать свет, что позволяет использовать ее для двусторонней печати на ткани. За счет своей фактуры ткань БлэкАут оставляет впечатление мягкости, комфорта, теплоты.
+            p.dopoln-wrap-desc__text Конечный продукт печати на блэкауте выглядит очень привлекательно, дорого, качественно.Конечный продукт печати на блэкауте выглядит очень привлекательно, дорого, качественно.
+            a(href="#").general__btn.dopoln-wrap-desc__btn Мне это нужно!
+      include ../common/ourWorks.pug
+      include ../common/ourClients.pug
+      include ../common/callOrder.pug

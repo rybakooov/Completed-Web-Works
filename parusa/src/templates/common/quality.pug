@@ -1,0 +1,46 @@
+section.modal.modal-quality
+  .quality-ok
+    .quality__close
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15.7069 1.70898L9.41506 8.00079L15.7069 14.2923L14.292 15.7071L8.0002 9.41531L1.70807 15.7071L0.293213 14.2926L6.58535 8.00079L0.293213 1.70898L1.70807 0.294128L8.0002 6.58593L14.292 0.294128L15.7069 1.70898Z" fill="black" fill-opacity="0.75"/>
+      </svg>
+    .quality-ok__title Спасибо за ваш отзыв
+    .quality-ok__text Мы приняли замечания к сведению и начинаем работу по улучшению наших продуктов.
+  .quality
+    .quality__close
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15.7069 1.70898L9.41506 8.00079L15.7069 14.2923L14.292 15.7071L8.0002 9.41531L1.70807 15.7071L0.293213 14.2926L6.58535 8.00079L0.293213 1.70898L1.70807 0.294128L8.0002 6.58593L14.292 0.294128L15.7069 1.70898Z" fill="black" fill-opacity="0.75"/>
+      </svg>
+    form.quality-form
+      h5.quality-form__title Контроль качества  
+      p.quality-form__subtitle Опишите свою проблему
+      .quality-form-wrap
+        div.input-wrap
+          input(type="text" id="imya-popup" data-required).general__input
+          label(for="imya-popup") Ваше имя
+        div.input-wrap
+          input(type="text" id="telephone-popup" data-required data-type="tel").general__input
+          label(for="telephone-popup") Ваш телефон
+        div.input-wrap
+          input(type="text" id="email-popup" data-required data-type="email").general__input
+          label(for="email-popup") E-mail
+        .quality-form-wrap-label
+          .quality-form-wrap-label-exit
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14px" height="14px" viewBox="0 0 357 357" style="enable-background:new 0 0 357 357;" xml:space="preserve"><g id="close"><polygon points="357,35.7 321.3,0 178.5,142.8 35.7,0 0,35.7 142.8,178.5 0,321.3 35.7,357 178.5,214.2 321.3,357 357,321.3 214.2,178.5 "/></g></svg>
+          label
+            p(style="display: flex;")
+              img(src="assets/images/file-order.svg", alt="file") 
+              | Прикрепить файл
+            input(type="file" multiple id="filesCallOrder")
+          .quality-form-wrap-label-box
+        div.input-wrap.input-wrap_text
+          textarea(rows="1" id="text-popup" data-required).general__input.quality-form-wrap__textarea
+          label(for="text-popup") Описание проблемы
+        .quality-form-wrap-buttons
+          .quality-form-wrap-buttons__link Порвался баннер
+          .quality-form-wrap-buttons__link Стёрлась краска
+          .quality-form-wrap-buttons__link Треснул подиум
+          .quality-form-wrap-buttons__link Ошибка с количеством
+        .quality-form-wrap-bottom
+          button(type="submit").general__btn.quality-form-wrap-bottom__submit Отправить
+          p.quality-form-wrap-bottom__text Отправляя данную форму, Вы соглашаетесь на обработку персональных данных

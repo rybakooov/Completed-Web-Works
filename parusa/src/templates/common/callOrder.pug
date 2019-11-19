@@ -1,0 +1,28 @@
+.callOrder
+  .callOrder-wrap
+    h4.callOrder__title Связатьcя с нами
+    form.general__callOrder
+      .general__callOrder-item
+        input(type="text" id="genCallOrderName" data-required).general__input
+        label(for="genCallOrderName") Имя
+      .general__callOrder-item
+        input(type="text" id="genCallOrderEmail" data-type="email" data-required).general__input
+        label(for="genCallOrderEmail") E-mail
+      .general__callOrder-item
+        input(type="text" id="genCallOrderTel" data-type="tel" data-required).general__input
+        label(for="genCallOrderTel") Телефон
+      .general__callOrder-item.general__callOrder-item_text
+        textarea(name="" id="genCallOrderText" rows="1").general__input
+        label(for="genCallOrderText") Сообщение
+      .general__callOrder-label
+        .general__callOrder-label-exit
+          <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14px" height="14px" viewBox="0 0 357 357" style="enable-background:new 0 0 357 357;" xml:space="preserve"><g id="close"><polygon points="357,35.7 321.3,0 178.5,142.8 35.7,0 0,35.7 142.8,178.5 0,321.3 35.7,357 178.5,214.2 321.3,357 357,321.3 214.2,178.5 "/></g></svg>
+        label
+          p(style="display: flex;")
+            img(src="assets/images/file-order.svg", alt="file") 
+            | Прикрепить файл
+          input(type="file" multiple id="filesCallOrder1")
+        .general__callOrder-label-box
+      .general__callOrder-bottom
+        button(type="submit").general__btn.general__callOrder-bottom__submit Отправить
+        p.general__callOrder-bottom__text Отправляя данную форму, Вы соглашаетесь на обработку персональных данных

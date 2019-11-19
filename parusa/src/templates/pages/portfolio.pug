@@ -1,0 +1,58 @@
+extends ../common/main.pug  
+block title
+  | Портфолио | ГК "Паруса"
+block content
+  section.portfolio
+    .portfolio-wrap
+      h1.general__title Портфолио
+      .portfolio-wrap-tabs
+        a(href="#tab1").portfolio-wrap-tabs__link Пресс-воллы
+        a(href="#tab2").portfolio-wrap-tabs__link Подиумы и сцены
+        a(href="#tab3").portfolio-wrap-tabs__link Флаги и флагштоки
+        a(href="#tab4").portfolio-wrap-tabs__link Оформление мероприятий
+      .portfolio-switch
+        .portfolio-switch-item(id="tab1")
+          .portfolio-switch-arrows
+            .portfolio-switch-arrows__prev
+              img(src="assets/images/arr-slider.svg", alt="")
+            .portfolio-switch-arrows__next
+              img(src="assets/images/arr-slider.svg", alt="" style="transform: rotate(180deg);")
+          .portfolio-switch-slider
+            img(src="assets/images/portfolio-slider.png", alt="").portfolio-switch-slider__item
+            img(src="assets/images/portfolio-slider.png", alt="").portfolio-switch-slider__item
+            img(src="assets/images/portfolio-slider.png", alt="").portfolio-switch-slider__item
+            img(src="assets/images/portfolio-slider.png", alt="").portfolio-switch-slider__item
+        .portfolio-switch-item(id="tab2")
+          .portfolio-switch-arrows
+            .portfolio-switch-arrows__prev
+              img(src="assets/images/arr-slider.svg", alt="")
+            .portfolio-switch-arrows__next
+              img(src="assets/images/arr-slider.svg", alt="" style="transform: rotate(180deg);")
+          .portfolio-switch-slider
+            img(src="assets/images/portfolio-slider.png", alt="").portfolio-switch-slider__item
+            img(src="assets/images/portfolio-slider.png", alt="").portfolio-switch-slider__item
+            img(src="assets/images/portfolio-slider.png", alt="").portfolio-switch-slider__item
+            img(src="assets/images/portfolio-slider.png", alt="").portfolio-switch-slider__item
+        .portfolio-switch-item(id="tab3")
+          .portfolio-switch-arrows
+            .portfolio-switch-arrows__prev
+              img(src="assets/images/arr-slider.svg", alt="")
+            .portfolio-switch-arrows__next
+              img(src="assets/images/arr-slider.svg", alt="" style="transform: rotate(180deg);")
+          .portfolio-switch-slider
+            img(src="assets/images/portfolio-slider.png", alt="").portfolio-switch-slider__item
+            img(src="assets/images/portfolio-slider.png", alt="").portfolio-switch-slider__item
+            img(src="assets/images/portfolio-slider.png", alt="").portfolio-switch-slider__item
+            img(src="assets/images/portfolio-slider.png", alt="").portfolio-switch-slider__item
+        .portfolio-switch-item(id="tab4")
+          .portfolio-switch-arrows
+            .portfolio-switch-arrows__prev
+              img(src="assets/images/arr-slider.svg", alt="")
+            .portfolio-switch-arrows__next
+              img(src="assets/images/arr-slider.svg", alt="" style="transform: rotate(180deg);")
+          .portfolio-switch-slider
+            img(src="assets/images/portfolio-slider.png", alt="").portfolio-switch-slider__item
+            img(src="assets/images/portfolio-slider.png", alt="").portfolio-switch-slider__item
+            img(src="assets/images/portfolio-slider.png", alt="").portfolio-switch-slider__item
+            img(src="assets/images/portfolio-slider.png", alt="").portfolio-switch-slider__item
+    include ../common/callOrder.pug
