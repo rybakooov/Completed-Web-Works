@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Days+One|Rubik&amp;display=swap&amp;subset=cyrillic" rel="stylesheet"/>
+    <link rel="icon" href="assets/images/favicon.png"/>
+    <meta property="og:image" content="assets/images/@1x/preview.jpg"/>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="assets/styles/app.min.css"/>
+    <script src="assets/scripts/jquery.min.js"></script>
+    <script src="assets/scripts/slick.min.js"></script>
+    <script src="assets/scripts/wow.js"></script>
+    <script src="assets/scripts/jquery.fancybox.min.js"></script>
+    <script src="assets/scripts/first-developer-script.js"></script>
+    <script src="assets/scripts/main.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=4a1ed107-792c-45d4-b593-9aebaea3d8c9&amp;lang=ru_RU" type="text/javascript"></script>
+    <title> Нижегородский ЦСМ
+    </title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="logo header__logo"><a href="/"><img class="logo__img" src="assets/images/logo.svg" alt=""/></a></div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="header__info"><a class="header__gumburger"></a>
+              <div class="d-none d-md-block header__phone"><a href="+78002002214"><span>8 800 200-22-14</span></a></div>
+              <div class="d-none d-md-block header__mail"><a href="mailto:mail@nncsm.ru"><span>Связь с нами</span></a></div>
+              <div class="d-none d-md-block d-xl-none header__search--mobile"><a href=""></a></div>
+              <div class="header__login"><a href=""><span>Личный кабинет</span></a></div>
+            </div>
+          </div>
+          <div class="col-xl-9">
+            <nav class="menu header__menu">
+              <ul class="menu__list">
+                <li class="menu__item menu-item--close"><img src="assets/images/cross_icon.svg" alt=""/></li>
+                <li class="menu__item menu__item--hassubmenu"><a class="menu__link" href="">О центре</a><span class="menu__item--hassubmenu__span"></span>
+                  <ul class="menu__submenu">
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">История</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Структура</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Документы</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Реквизиты</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Благодарственные письма</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Профсоюзная организация</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Работа и стажировка</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Область акредитации</a></li>
+                  </ul>
+                </li>
+                <li class="menu__item menu__item--hassubmenu"><a class="menu__link" href="">Услуги</a><span class="menu__item--hassubmenu__span"></span>
+                  <ul class="menu__submenu">
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Метрология</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Испытания</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Подтверждение соответствия</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Аттестация испытательного оборудования</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Оценка состояния измерений</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Производство стандартных образцов</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Узлы учета энергоресурсов</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Межлабораторные сличительные испытания</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Иструментальный контроль технического состояния изделий медицинской техники</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Ремонт оптико-механических приборов</a></li>
+                  </ul>
+                </li>
+                <li class="menu__item"><a class="menu__link" href="">Конкурсы</a></li>
+                <li class="menu__item"><a class="menu__link" href="">Новости</a></li>
+                <li class="menu__item menu__item--hassubmenu"><a class="menu__link" href="">Обратная связь</a><span class="menu__item--hassubmenu__span"></span>
+                  <ul class="menu__submenu">
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">FAQ</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Жалобы, предложения</a></li>
+                  </ul>
+                </li>
+                <li class="menu__item"><a class="menu__link" href="">Контакты</a></li>
+                <li class="menu__item menu__item--social"><a class="menu__link menu__item--social_link" href=""><img src="assets/images/phone_icon.svg" alt=""/></a><a class="menu__link menu__item--social_link" href=""><img src="assets/images/email_icon.svg" alt=""/></a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-8 col-md-3">
+            <div class="search header__search">
+              <form class="search__form" action="">
+                <input class="search__input" type="search" name="search" placeholder="Поиск по сайту..."/>
+                <button class="search__button" type="submit"><img class="serach__img" src="assets/images/search_icon.svg" alt=""/></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="subheader">
+      <div class="subheader-wrap">
+        <div class="breadcrumbs"><a class="breadcrumbs__link" href="#">Главная</a><a class="breadcrumbs__link" href="#">Поиск</a></div>
+        <div class="subheader-wrap__title">Поиск по сайту</div>
+      </div>
+    </div>
+    <form class="search_full" action="">
+      <div class="search_full-top">
+        <input class="search_full-top__sear" type="text" placeholder="Поиск по сайту..."/>
+        <button type="submit">
+           <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.981 13.4703C8.71395 13.4703 10.3488 12.7999 11.575 11.5734C12.8011 10.347 13.4714 8.71175 13.4714 6.97839C13.4714 5.24502 12.8011 3.60978 11.575 2.38334C10.3488 1.1569 8.71395 0.48645 6.981 0.48645C5.24804 0.48645 3.61317 1.1569 2.38702 2.38334C-0.147024 4.91797 -0.147024 9.0388 2.38702 11.5734C3.61317 12.7999 5.24804 13.4703 6.981 13.4703ZM6.981 2.38334C8.20715 2.38334 9.3679 2.85756 10.2344 3.72424C12.0327 5.52302 12.0327 8.43376 10.2344 10.2325C9.3679 11.0992 8.20715 11.5734 6.981 11.5734C5.75484 11.5734 4.59409 11.0992 3.72761 10.2325C2.86113 9.36585 2.38702 8.20482 2.38702 6.97839C2.38702 5.75195 2.86113 4.59092 3.72761 3.72424C4.59409 2.85756 5.75484 2.38334 6.981 2.38334ZM17.1092 17.1085C17.6012 16.6164 17.6012 15.8187 17.1092 15.3265L14.0232 12.2398C13.5547 11.7712 12.7792 11.8407 12.3107 12.3093C11.8421 12.778 11.7726 13.5535 12.2411 14.0222L15.3268 17.1085C15.819 17.6008 16.617 17.6008 17.1092 17.1085Z" fill="#697882"/>
+</svg>
+        </button>
+        <div class="search_full-top-filter">Сортировать:
+          <label>
+            <input id="relev" type="radio" name="radio-sort" checked="checked"/>
+            <p>по релевантности</p>
+          </label>
+          <label>
+            <input id="relev" type="radio" name="radio-sort"/>
+            <p>по дате публикации</p>
+          </label>
+          <label>
+            <input id="relev" type="radio" name="radio-sort"/>
+            <p>по названию</p>
+          </label>
+        </div>
+      </div>
+      <div class="search_full-main">
+        <div class="search_full-main-wrap">
+          <div class="search_full-main-wrap-item"><a class="search_full-main-wrap-item__title" href="#">1. Испытания</a>
+            <p class="search_full-main-wrap-item__text"> Испытания. Лаборатория испытаний продукции по акустическим и вибрационным характеристикам. Нижегородский испытательный центр медицинских изделий (НИЦМИ).</p>
+            <div class="search_full-main-wrap-item__link"><a href="#">nncsm.ru/ispytaniia/ </a>сохраненная копия</div>
+          </div>
+          <div class="search_full-main-wrap-item"><a class="search_full-main-wrap-item__title" href="#">1. Испытания</a>
+            <p class="search_full-main-wrap-item__text"> Испытания. Лаборатория испытаний продукции по акустическим и вибрационным характеристикам. Нижегородский испытательный центр медицинских изделий (НИЦМИ).</p>
+            <div class="search_full-main-wrap-item__link"><a href="#">nncsm.ru/ispytaniia/ </a>сохраненная копия</div>
+          </div>
+          <div class="search_full-main-wrap-item"><a class="search_full-main-wrap-item__title" href="#">1. Испытания</a>
+            <p class="search_full-main-wrap-item__text"> Испытания. Лаборатория испытаний продукции по акустическим и вибрационным характеристикам. Нижегородский испытательный центр медицинских изделий (НИЦМИ).</p>
+            <div class="search_full-main-wrap-item__link"><a href="#">nncsm.ru/ispytaniia/ </a>сохраненная копия</div>
+          </div>
+          <div class="search_full-main-wrap-item"><a class="search_full-main-wrap-item__title" href="#">1. Испытания</a>
+            <p class="search_full-main-wrap-item__text"> Испытания. Лаборатория испытаний продукции по акустическим и вибрационным характеристикам. Нижегородский испытательный центр медицинских изделий (НИЦМИ).</p>
+            <div class="search_full-main-wrap-item__link"><a href="#">nncsm.ru/ispytaniia/ </a>сохраненная копия</div>
+          </div>
+        </div>
+        <div class="search_full-main-aside">
+          <div class="search_full-main-aside__title">Поиск по разделам</div>
+          <ul class="search_full-main-aside-ul">
+            <li class="search_full-main-aside-li search_full-main-aside-li_hassub"> 
+              <label>
+                <input type="checkbox" name=""/>
+                <p>О центре </p>
+              </label><span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.8334 8.47503C15.8338 8.59952 15.8063 8.72253 15.753 8.83501C15.6996 8.9475 15.6217 9.04659 15.525 9.12503L10.525 13.15C10.3759 13.2726 10.1889 13.3396 9.99586 13.3396C9.80284 13.3396 9.6158 13.2726 9.46669 13.15L4.46669 8.98336C4.29651 8.84191 4.18949 8.63865 4.16918 8.4183C4.14886 8.19794 4.21691 7.97854 4.35836 7.80836C4.49981 7.63818 4.70307 7.53116 4.92342 7.51084C5.14378 7.49053 5.36318 7.55858 5.53336 7.70003L10 11.425L14.4667 7.82503C14.589 7.72312 14.738 7.65839 14.8959 7.63849C15.0539 7.61859 15.2142 7.64436 15.358 7.71274C15.5018 7.78112 15.623 7.88925 15.7072 8.02434C15.7914 8.15943 15.8352 8.31583 15.8334 8.47503Z" fill="white"/>
+</svg></span>
+              <ul class="search_full-main-aside-ul_sub">
+                <li class="search_full-main-aside-li">
+                  <label>
+                    <input type="checkbox" name=""/>
+                    <p>История</p>
+                  </label>
+                </li>
+                <li class="search_full-main-aside-li">
+                  <label>
+                    <input type="checkbox" name=""/>
+                    <p>Структура</p>
+                  </label>
+                </li>
+                <li class="search_full-main-aside-li">
+                  <label>
+                    <input type="checkbox" name=""/>
+                    <p>Документы</p>
+                  </label>
+                </li>
+                <li class="search_full-main-aside-li">
+                  <label>
+                    <input type="checkbox" name=""/>
+                    <p>Реквизиты</p>
+                  </label>
+                </li>
+                <li class="search_full-main-aside-li">
+                  <label>
+                    <input type="checkbox" name=""/>
+                    <p>Благодарственные письма</p>
+                  </label>
+                </li>
+                <li class="search_full-main-aside-li">
+                  <label>
+                    <input type="checkbox" name=""/>
+                    <p>Профсоюзная организация</p>
+                  </label>
+                </li>
+                <li class="search_full-main-aside-li">
+                  <label>
+                    <input type="checkbox" name=""/>
+                    <p>Работа и стажировка</p>
+                  </label>
+                </li>
+                <li class="search_full-main-aside-li">
+                  <label>
+                    <input type="checkbox" name=""/>
+                    <p>Область аккредитации</p>
+                  </label>
+                </li>
+                <li class="search_full-main-aside-li">
+                  <label>
+                    <input type="checkbox" name=""/>
+                    <p>О центре </p>
+                  </label>
+                </li>
+              </ul>
+            </li>
+            <li class="search_full-main-aside-li search_full-main-aside-li_hassub"> 
+              <label>
+                <input type="checkbox" name=""/>
+                <p>Услуги</p>
+              </label><span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.8334 8.47503C15.8338 8.59952 15.8063 8.72253 15.753 8.83501C15.6996 8.9475 15.6217 9.04659 15.525 9.12503L10.525 13.15C10.3759 13.2726 10.1889 13.3396 9.99586 13.3396C9.80284 13.3396 9.6158 13.2726 9.46669 13.15L4.46669 8.98336C4.29651 8.84191 4.18949 8.63865 4.16918 8.4183C4.14886 8.19794 4.21691 7.97854 4.35836 7.80836C4.49981 7.63818 4.70307 7.53116 4.92342 7.51084C5.14378 7.49053 5.36318 7.55858 5.53336 7.70003L10 11.425L14.4667 7.82503C14.589 7.72312 14.738 7.65839 14.8959 7.63849C15.0539 7.61859 15.2142 7.64436 15.358 7.71274C15.5018 7.78112 15.623 7.88925 15.7072 8.02434C15.7914 8.15943 15.8352 8.31583 15.8334 8.47503Z" fill="white"/>
+</svg></span>
+              <ul class="search_full-main-aside-ul_sub"> 
+                <li class="search_full-main-aside-li">
+                  <label>
+                    <input type="checkbox" name=""/>
+                    <p>История</p>
+                  </label>
+                </li>
+                <li class="search_full-main-aside-li">
+                  <label>
+                    <input type="checkbox" name=""/>
+                    <p>Структура</p>
+                  </label>
+                </li>
+                <li class="search_full-main-aside-li">
+                  <label>
+                    <input type="checkbox" name=""/>
+                    <p>Документы</p>
+                  </label>
+                </li>
+              </ul>
+            </li>
+            <li class="search_full-main-aside-li search_full-main-aside-li_hassub"> 
+              <label>
+                <input type="checkbox" name=""/>
+                <p>Конкурсы</p>
+              </label><span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.8334 8.47503C15.8338 8.59952 15.8063 8.72253 15.753 8.83501C15.6996 8.9475 15.6217 9.04659 15.525 9.12503L10.525 13.15C10.3759 13.2726 10.1889 13.3396 9.99586 13.3396C9.80284 13.3396 9.6158 13.2726 9.46669 13.15L4.46669 8.98336C4.29651 8.84191 4.18949 8.63865 4.16918 8.4183C4.14886 8.19794 4.21691 7.97854 4.35836 7.80836C4.49981 7.63818 4.70307 7.53116 4.92342 7.51084C5.14378 7.49053 5.36318 7.55858 5.53336 7.70003L10 11.425L14.4667 7.82503C14.589 7.72312 14.738 7.65839 14.8959 7.63849C15.0539 7.61859 15.2142 7.64436 15.358 7.71274C15.5018 7.78112 15.623 7.88925 15.7072 8.02434C15.7914 8.15943 15.8352 8.31583 15.8334 8.47503Z" fill="white"/>
+</svg></span>
+              <ul class="search_full-main-aside-ul_sub">
+                <li class="search_full-main-aside-li">
+                  <label>
+                    <input type="checkbox" name=""/>
+                    <p>История</p>
+                  </label>
+                </li>
+                <li class="search_full-main-aside-li">
+                  <label>
+                    <input type="checkbox" name=""/>
+                    <p>Структура</p>
+                  </label>
+                </li>
+                <li class="search_full-main-aside-li">
+                  <label>
+                    <input type="checkbox" name=""/>
+                    <p>Документы</p>
+                  </label>
+                </li>
+              </ul>
+            </li>
+            <li class="search_full-main-aside-li">
+              <label>
+                <input type="checkbox" name=""/>
+                <p>Новости</p>
+              </label>
+            </li>
+            <li class="search_full-main-aside-li">
+              <label>
+                <input type="checkbox" name=""/>
+                <p>Обратная связь</p>
+              </label>
+            </li>
+            <li class="search_full-main-aside-li">
+              <label>
+                <input type="checkbox" name=""/>
+                <p>Контакты</p>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </form>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-4">
+            <nav class="footer-menu">
+              <ul class="footer-menu__list">
+                <li class="footer-menu__item"><a class="footer-menu__link footer-menu__link--has_sub" href="">О центре</a>
+                  <ul class="footer-menu__submenu">
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">История</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Структура</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Документы</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Реквизиты</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Благодарственные письма</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Профсоюзная организация</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Работа и стажировка</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Область акредитации</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <nav class="footer-menu">
+              <ul class="footer-menu__list">
+                <li class="footer-menu__item"><a class="footer-menu__link footer-menu__link--has_sub" href="">Услуги</a>
+                  <ul class="footer-menu__submenu">
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Метрология</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Испытания</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Подтверждение соответствия</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Аттестация испытательного оборудования</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Оценка состояния измерений</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Производство стандартных образцов</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Узлы учета энергоресурсов</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Межлабораторные сличительные испытания</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Иструментальный контроль технического состояния изделий медицинской техники</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Ремонт оптико-механических приборов</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-lg-4">
+            <nav class="footer-menu footer-menu--submenu_fix">
+              <ul class="footer-menu__list">
+                <li class="footer-menu__item"><a class="footer-menu__link" href="">Конкурсы</a></li>
+                <li class="footer-menu__item"><a class="footer-menu__link" href="">Новости</a></li>
+                <li class="footer-menu__item"><a class="footer-menu__link footer-menu__link--has_sub" href="">Обратная связь</a>
+                  <ul class="footer-menu__submenu">
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">FAQ</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Жалобы, предложения</a></li>
+                  </ul>
+                </li>
+                <li class="footer-menu__item"><a class="footer-menu__link" href="">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="footer__infoblock">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 col-lg-4">
+                <div class="logo footer__logo"><a href="/"><img class="logo__img" src="assets/images/logo.svg" alt=""/></a></div>
+                <p class="footer__copy d-none d-lg-block">© РСТ Нижегородский ЦСМ, 2019</p>
+                <div class="social footer__social footer__social--mobile d-block d-lg-none"><a class="social__link" href=""><i class="fa fa-vk"></i></a><a class="social__link" href=""><i class="fa fa-facebook"></i></a><a class="social__link" href=""><i class="fa fa-twitter"></i></a></div>
+              </div>
+              <div class="col-lg-4 d-none d-lg-block">
+                <div class="social footer__social"><a class="social__link" href=""><i class="fa fa-vk"></i></a><a class="social__link" href=""><i class="fa fa-facebook"></i></a><a class="social__link" href=""><i class="fa fa-twitter"></i></a></div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="footer__info">
+                  <p>Россия, Нижний Новгород,</p>
+                  <p>603950, ул. Республиканская, 1</p><br/>
+                  <p><a href="+78002002214">8 800 200-22-14</a></p>
+                  <p><a href="mailto:mail@nncsm.ru">mail@nncsm.ru</a></p>
+                  <p class="footer__copy d-block d-md-block d-lg-none">© РСТ Нижегородский ЦСМ, 2019</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="darkblue">
+      <div class="darkblue-wrap">
+        <div class="darkblue-block">
+          <h6 class="darkblue-block__title">ИЦ определяет критерии качества и безопасности:</h6>
+          <p class="darkblue-block__text">• токсичные элементы;</p>
+          <p class="darkblue-block__text">• микотоксины;</p>
+          <p class="darkblue-block__text">• пестициды;</p>
+          <p class="darkblue-block__text">• радионуклиды;</p>
+          <p class="darkblue-block__text">• антибиотики;</p>
+          <p class="darkblue-block__text">• нитраты, нитриты;</p>
+          <p class="darkblue-block__text">• нитрозамины, бенз(а)пирен;</p>
+          <p class="darkblue-block__text">• микробиологические показатели;</p>
+          <p class="darkblue-block__text">• физико-химические показатели;</p>
+          <p class="darkblue-block__text">• консерванты, витамины;</p>
+          <p class="darkblue-block__text">• ГМИ и ГМО (генетически модифицированные источники и организмы).</p>
+        </div>
+        <div class="darkblue-block">
+          <h6 class="darkblue-block__title">ИЦ проводит:</h6>
+          <p class="darkblue-block__text">• Контроль технологических процессов производства;</p>
+          <p class="darkblue-block__text">• Расчет пищевой и энергетической ценности продукции;</p>
+          <p class="darkblue-block__text">• Контроль санитарного состояния предприятий (смывы);</p>
+          <p class="darkblue-block__text">• Бесплатные консультации по организации производственного контроля на предприятиях.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
