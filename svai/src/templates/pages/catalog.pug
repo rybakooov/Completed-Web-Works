@@ -1,0 +1,102 @@
+extends ../template
+
+block variables
+	- var title = 'Каталог'
+
+block content
+	.catalog
+		h1.title Винтовые сваи
+		.catalog-content
+			form.catalog-content-filters(action="#")
+				.catalog-content-filters-wrap
+					.catalog-content-filters-category
+						.catalog-content-filters-category__title.active Вид
+						.catalog-content-filters-category-items
+							-for(var j = 8; j < 15; j++)
+								label.catalog-content-filters-category-items__item(for="check"+j)
+									input(type="checkbox" id="check"+j)
+									span
+									| 57 мм
+					.catalog-content-filters-category
+						.catalog-content-filters-category__title.active Применение
+						.catalog-content-filters-category-items
+							-for(var i = 0; i < 8; i++)
+								label.catalog-content-filters-category-items__item(for="check"+i)
+									input(type="checkbox" id="check"+i)
+									span
+									| Лёгкие вентилируемые заборы
+				.catalog-content-filters-btns
+					button.catalog-content-filters-btns__submit(type="submit") Показать
+					button.catalog-content-filters-btns__reset(type="reset") Сбросить все
+			.catalog-content-main
+				.catalog-content-main-sort-wrap
+					form.catalog-content-main-sort(action="#")
+						select(name="sort")
+							option(value="1") Цена по возрастанию
+							option(value="2") Цена по убыванию
+							option(value="3") Цена по возрастанию
+							option(value="4") Цена по убыванию
+					.catalog-content-filters-popup 
+						<svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1 3H17" stroke="black" stroke-linecap="round"/>
+							<circle cx="6" cy="3" r="3" fill="black"/>
+							<path d="M17 11H1" stroke="black" stroke-linecap="round"/>
+							<circle r="3" transform="matrix(-1 0 0 1 12 11)" fill="black"/>
+						</svg>
+						| Фильтры
+				.catalog-content-main-items
+					.catalog-content-main-items-wrap
+						a.catalog-content-main-items-item(href="#")
+							.catalog-content-main-items-item__img
+								img(src="assets/images/gallery-item.jpg", alt="")
+							.catalog-content-main-items-item-info
+								.catalog-content-main-items-item-info-top
+									.catalog-content-main-items-item-info-top__title Стандартные винтовые сваи со сварным наконечником
+									.catalog-content-main-items-item-info-top__price от 950 ₽
+								.catalog-content-main-items-item-info-mid
+									-for(var j = 1; j < 5; j++)
+										.catalog-content-main-items-item__icon
+											<svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M45.5 24.5C45.5 36.098 36.098 45.5 24.5 45.5C12.902 45.5 3.5 36.098 3.5 24.5C3.5 12.902 12.902 3.5 24.5 3.5C36.098 3.5 45.5 12.902 45.5 24.5Z" stroke="#FFBC40" stroke-width="3"/>
+												<path d="M2 47L11.5 37.5" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
+												<path d="M37.5 11.5L47 2" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
+											</svg>
+											span 
+												span 57 
+												| мм
+								.catalog-content-main-items-item-info-bot
+									.catalog-content-main-items-item-info-bot-adv
+										span Тяжёлые заборы из профлиста/из дерева
+										span Лёгкие заборы усиленной конструкции
+									.catalog-content-main-items-item-info-bot__btn Подробнее
+						a.catalog-content-main-items-item(href="#")
+							.catalog-content-main-items-item__img
+								img(src="assets/images/gallery-item.jpg", alt="")
+							.catalog-content-main-items-item-info
+								.catalog-content-main-items-item-info-top
+									.catalog-content-main-items-item-info-top__title Стандартные винтовые сваи со сварным наконечником
+									.catalog-content-main-items-item-info-top__price от 950 ₽
+								.catalog-content-main-items-item-info-mid
+									-for(var j = 1; j < 5; j++)
+										.catalog-content-main-items-item__icon
+											<svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M45.5 24.5C45.5 36.098 36.098 45.5 24.5 45.5C12.902 45.5 3.5 36.098 3.5 24.5C3.5 12.902 12.902 3.5 24.5 3.5C36.098 3.5 45.5 12.902 45.5 24.5Z" stroke="#FFBC40" stroke-width="3"/>
+												<path d="M2 47L11.5 37.5" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
+												<path d="M37.5 11.5L47 2" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
+											</svg>
+											span 
+												span 57 
+												| мм
+								.catalog-content-main-items-item-info-bot
+									.catalog-content-main-items-item-info-bot-adv
+										span Тяжёлые заборы из профлиста/из дерева
+										span Лёгкие заборы усиленной конструкции
+									.catalog-content-main-items-item-info-bot__btn Подробнее
+					.catalog-content-main-pagination 
+						a.catalog-content-main-pagination__arrow.arr-prev.disabled(href="#")
+						.catalog-content-main-pagination-items
+							a.catalog-content-main-pagination__item.active.disabled(href="#") 1
+							a.catalog-content-main-pagination__item(href="#") 2
+							a.catalog-content-main-pagination__item.disabled(href="#") ...
+							a.catalog-content-main-pagination__item(href="#") 10
+						a.catalog-content-main-pagination__arrow.arr-next(href="#")

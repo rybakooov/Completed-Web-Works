@@ -1,0 +1,43 @@
+.goodpage-tabs-item-info-selections.goodpage-tabs-item-info-checkboxes{
+
+  margin-top: -26px;
+  margin-bottom: 26px;
+  .goodpage-tabs-item-info-col{
+    margin-top: 26px;
+    margin-bottom: 26px;
+  }
+
+  .goodpage-tabs-item-price-delivery{
+    top: 220px;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .goodpage-tabs-item-info-col{
+    min-height: 83px;
+  }
+}
+
+@include w1024{
+  .goodpage-tabs-item-info-selections_last{
+    flex-direction: row;
+    width: 100%;
+    .goodpage-tabs-item-info-col{
+      flex:none;
+      width: 50%;
+    }
+  }
+}
+
+@include w480{
+  .goodpage-tabs-item-info-selections__title{
+    min-height: 36px;
+  }
+  .goodpage-tabs-item-info-selections.goodpage-tabs-item-info-checkboxes{
+    padding-right: 5px;
+  }
+  .goodpage-tabs-item-info-selections.goodpage-tabs-item-info-checkboxes .goodpage-tabs-item-info-col{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,407 @@
+.index{
+  padding-top: 69px;
+  &-banner{
+    background: #FFFDF9;
+    height: calc(100vh - 250px);
+    min-height: 600px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    @media screen and (min-width: 1601px){
+      min-height: 700px !important;
+    }
+    &-left{
+      max-width: 1440px;
+      padding: 0 138px;
+      margin: 0 auto;
+      width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+    &-right{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      img{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        @media screen and (min-width: 1601px){
+          transform: translateY(-50%) scale(1.1);
+          transform-origin: right;
+        }
+      }
+      svg{
+        position: absolute;
+        left: 0;
+        top: -150px;
+      }
+    }
+    &__title{
+      font-weight: bold;
+      font-size: 48px;
+      line-height: 125%;
+      color: #000000;
+    }
+    &__subtitle{
+      font-size: 24px;
+      line-height: 125%;
+      margin: 32px 0 63px;
+    }
+    &__link{
+      background: #5D77E6;
+      border-radius: 50px;
+      width: 187px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 150%; 
+      transition: .3s;
+      &:hover{
+        @media screen and (min-width: 1024px){
+          background: lighten(#5D77E6, 10%);
+        }
+      }
+      
+    }
+  }
+  &-about{
+    padding-top: 160px;
+    position: relative;
+    padding-bottom: 168px;
+    &:after{
+      content: '';
+      background-image: url(../images/sphere.svg);
+      background-size: 200% 200%;
+      background-position: top right;
+      height: 150px;
+      width: 150px;
+      background-repeat: no-repeat;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+    &-wrap{
+      max-width: 1440px;
+      padding: 0 138px;
+      display: flex;
+      margin: 0 auto;
+    }
+    &-desc{
+      &__text{
+        font-size: 20px;
+        line-height: 150%;
+        display: block; 
+        &:not(:last-child){
+          margin-bottom: 30px;
+        }
+      }
+      &__link{
+        margin-top: 70px;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 125%;
+        color: #47657A;
+        svg{
+          margin-left: 20px;
+        }
+      }
+    }
+    &-imgbox{
+      margin-left: 80px;
+    }
+  }
+  &-why{
+    max-width: 1440px;
+    padding: 0 138px;
+    margin: 0 auto;
+    &__title{
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 150%;
+      color: rgba(0, 0, 0, 0.75);
+      margin-bottom: 100px;
+      text-align: center;
+    }
+    &-wrap{
+      display: flex;
+      flex-wrap: wrap;
+      margin: -50px -20px;
+    }
+    &-item{
+      width: calc(50% - 40px);
+      margin: 50px 20px;
+      display: flex;
+      &-desc{
+        &__title{
+          font-weight: bold;
+          font-size: 24px;
+          line-height: 150%;
+          color: rgba(0, 0, 0, 0.75);
+          margin-bottom: 16px;
+        }
+        &__text{
+          font-size: 20px;
+          line-height: 150%;
+          color: rgba(0, 0, 0, 0.75);
+        }
+      }
+      &-imgbox{
+        margin-right: 44px;
+        width: 160px;
+        height: 160px;
+        background: #FFFFFF;
+        box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+      }
+    }
+  }
+  &-callOrder{
+    background: #FFFDF8;
+    margin-top: 100px;
+    margin-bottom: -80px;
+    .callOrder-form{
+      padding-right: 0;
+      max-width: 926px;
+      margin: 0 auto;
+    }
+    .callOrder-form-inpbox__submit{
+			border-color: #5D77E6;
+		}
+		.callOrder-form__text{
+			max-width: 510px;
+			a{
+				color: #5D77E6;
+			}
+    }
+    .callOrder-form__subtitle{
+      text-align: center;
+      font-size: 24px;
+      line-height: 125%;
+      color: rgba(0, 0, 0, 0.75);
+      margin: 0 auto 42px;
+    }
+    .callOrder-form__title{
+      margin-bottom: 8px;
+    }
+    .callOrder-form__text{
+      max-width: none;
+      display: inline;
+      a{
+        display: inline;
+      }
+    }
+  }
+}
+
+
+
+@include w1440{
+  .index{
+    padding-top: 29px;
+  }
+  .index-banner-left, .index-about-wrap, .index-why{
+    padding: 0 20px;
+  }
+}
+@include w768{
+  .index-banner-right{
+    transform: translateY(10%);
+    img{
+      height: 60%;
+    }
+  }
+  .index-banner__title{
+    max-width: 500px;
+    br{
+      display: none;
+    }
+  }
+  .index-banner{
+    height: 100vh;
+  }
+  .index-about{
+    padding: 60px 20px 80px;
+    background-position: right bottom;
+    &:after{
+      left: auto;
+      right: -30px;
+      background-position: top left;
+    }
+    &-wrap{
+      padding: 0;
+      flex-direction: row-reverse;
+
+    }
+    &-imgbox{
+      margin-left: 0;
+      margin-right: 60px;
+      width: 230px;
+      flex-shrink: 0;
+      margin-top: 60px;
+      img{
+        width: 100%;
+      }
+    }
+    &-desc{
+      &__text{
+        font-size: 18px;
+        line-height: 125%;
+        &:not(:last-child){
+          margin-bottom: 18px;
+        }
+      }
+      &__link{
+        margin-top: 60px;
+        font-size: 20px;
+        line-height: 125%;
+      }
+    }
+  }
+  .index-why-item-imgbox{
+    width: 80px;
+    height: 80px;
+    margin-right: 24px;
+    svg{
+      transform-origin: center center;
+      transform: scale(0.5);
+    }
+  }
+  .index-why-wrap{
+    margin: -25px -20px;
+  }
+  .index-why-item{
+    margin: 25px 20px;
+  }
+  .index-why-item-desc__title{
+    font-size: 22px;
+    line-height: 150%;
+  }
+  .index-why-item-desc__text{
+    font-size: 18px;
+    line-height: 125%;
+  }
+
+  .index-callOrder .callOrder-form-inpbox{
+    flex-direction: row;
+    max-width: none;
+    input{
+      margin-right: 20px;
+      margin-bottom: 0;;
+    }
+  }
+}
+
+
+@include w480{
+  .index{
+    &-banner{
+      height: 486px;
+      min-height: 0;
+      padding-bottom: 33px;
+      &-left{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+      &__title{
+        font-size: 25px;
+        line-height: 125%;
+        margin-top: 56px;
+      }
+      &__subtitle{
+        font-size: 18px;
+        line-height: 125%;
+        margin-top: 20px;
+        margin-bottom: 0;;
+      }
+      &__link{
+        margin-top: auto;
+        width: 100%;
+      }
+      &-right{
+        img{
+          height: 220px;
+          transform: translateY(-55%);
+        }
+        svg{
+          display: none;
+        }
+      }
+    }
+  }
+  .index-about-wrap{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .index-about{
+    padding-top: 20px;
+  }
+  .index-about-imgbox{
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+  .index-about-desc__text{
+    font-size: 16px;
+    &:not(:last-child){
+      margin-bottom: 18px;
+    }
+  }
+  .index-about-desc__link{
+    font-size: 16px;
+    line-height: 125%;
+  }
+  .index-about:after{
+    right: auto;
+    left: 0;
+    background-position: top right;
+    height: 75px;
+    width: 75px;
+  }
+  .index-why-item{
+    width: 100%;
+    margin: 35px 20px;
+  }
+  .index-why__title{
+    margin-bottom: 45px;
+    font-size: 24px;
+    line-height: 150%;
+  }
+
+  .index-why-item-desc__title{
+    font-size: 20px;
+  }
+  .index-why-item-desc__text{
+    font-size: 16px;
+  }
+  .index-callOrder .callOrder-form-inpbox{
+    flex-direction: column;
+  }
+  .index-callOrder .callOrder-form-inpbox input{
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  .index-callOrder .callOrder-form__title{
+    font-size: 24px;
+    line-height: 150%;
+    text-align: center;
+    max-width: none;
+  }
+  .index-callOrder .callOrder-form__subtitle{
+    font-size: 18px;
+    line-height: 150%;
+  }
+}

@@ -1,0 +1,71 @@
+extends ../template
+
+block variables
+	- var title = 'proj'
+
+block content
+	main.proj
+		.proj-top
+			h1.proj-top__title Наши проекты
+			form.news-top__calendarForm#news-top__form
+				label
+					input(type="text" readonly)#news-top__calendarForm-input.news-top__calendarForm-input
+					span 
+						<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M8.61145 0.880078L4.9977 4.49383L1.38395 0.880078C1.1402 0.636328 0.743945 0.636328 0.500195 0.880078C0.256445 1.12383 0.256445 1.52008 0.500195 1.76383L4.55395 5.81758C4.67645 5.94008 4.8377 6.00133 4.9977 6.00008C5.15895 6.00008 5.31895 5.94008 5.44145 5.81758L9.4952 1.76383C9.73895 1.52008 9.73895 1.12383 9.4952 0.880078C9.25145 0.636328 8.8552 0.636328 8.61145 0.880078Z" fill="black" fill-opacity="0.75"/>
+						</svg>
+		article.proj-article
+			aside.proj-aside
+				.proj-aside__title Категории
+					<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M8.91815 1.07729C8.80788 0.974235 8.62871 0.974235 8.51845 1.07729L5.00387 4.36876L1.48239 1.07729C1.37213 0.974235 1.19296 0.974235 1.0827 1.07729C0.972435 1.18035 0.972435 1.34783 1.0827 1.45089L4.79713 4.92271C4.85226 4.97424 4.92117 5 4.99697 5C5.06589 5 5.14169 4.97424 5.19682 4.92271L8.91125 1.45089C9.02841 1.34783 9.02841 1.18035 8.91815 1.07729Z" fill="black" fill-opacity="0.75"/>
+						<path d="M8.38188 0.931182L8.38174 0.931316L5.00373 4.09487L1.61896 0.931182C1.43183 0.756273 1.13326 0.756273 0.946127 0.931182C0.751291 1.11329 0.751291 1.41489 0.946127 1.597L4.66056 5.06882C4.75473 5.15684 4.87327 5.2 4.99697 5.2C5.11131 5.2 5.23752 5.15842 5.33339 5.06882L9.04589 1.5988C9.24993 1.41682 9.24982 1.11354 9.05472 0.931182C8.86758 0.756273 8.56901 0.756273 8.38188 0.931182Z" stroke="black" stroke-opacity="0.75" stroke-width="0.4"/>
+					</svg>
+				ul 
+					li
+						a(href="#").active Винтовые сваи
+					li
+						a(href="#") Подъём дома на винтовые сваи
+					li
+						a(href="#") Строительство домов
+					li
+						a(href="#") Заборы
+					li
+						a(href="#") Работы по воротам
+			section.proj-section
+				.proj-section-item
+					.proj-section-item-imgbox
+						img(src="assets/images/proj.png", alt="")
+					.proj-section-item__title Фундамент на винтовых сваях
+					.proj-section-item-desc
+						.proj-section-item-desc__where г. Санкт-Петербург
+						time.proj-section-item-desc__when 27.05.2019
+				.proj-section-item
+					.proj-section-item-imgbox
+						img(src="assets/images/proj.png", alt="")
+					.proj-section-item__title Фундамент на винтовых сваях
+					.proj-section-item-desc
+						.proj-section-item-desc__where г. Санкт-Петербург
+						time.proj-section-item-desc__when 27.05.2019
+				.proj-section-item
+					.proj-section-item-imgbox
+						img(src="assets/images/proj.png", alt="")
+					.proj-section-item__title Фундамент на винтовых сваях
+					.proj-section-item-desc
+						.proj-section-item-desc__where г. Санкт-Петербург
+						time.proj-section-item-desc__when 27.05.2019
+				.proj-section-item
+					.proj-section-item-imgbox
+						img(src="assets/images/proj.png", alt="")
+					.proj-section-item__title Фундамент на винтовых сваях
+					.proj-section-item-desc
+						.proj-section-item-desc__where г. Санкт-Петербург
+						time.proj-section-item-desc__when 27.05.2019
+				.catalog-content-main-pagination 
+					a.catalog-content-main-pagination__arrow.arr-prev.disabled(href="#")
+					.catalog-content-main-pagination-items
+						a.catalog-content-main-pagination__item.active.disabled(href="#") 1
+						a.catalog-content-main-pagination__item(href="#") 2
+						a.catalog-content-main-pagination__item.disabled(href="#") ...
+						a.catalog-content-main-pagination__item(href="#") 10
+					a.catalog-content-main-pagination__arrow.arr-next(href="#")

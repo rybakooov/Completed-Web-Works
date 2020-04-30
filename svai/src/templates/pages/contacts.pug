@@ -1,0 +1,52 @@
+extends ../template
+
+block variables
+	- var title = 'Контакты'
+
+block content
+	main.contacts
+		h1.contacts__title Контакты
+		article.contacts-article
+			section.contacts-section
+				.contacts-section-top
+					.contacts-section-shedule 
+						.contacts-section-shedule__circle
+						| Работаем по пн-пт с 9.00 до 21.00
+					.contacts-section-address 
+						<svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M6 11.8846L9.18225 8.82631C9.81151 8.22132 10.24 7.45056 10.4136 6.61149C10.5872 5.77241 10.498 4.9027 10.1574 4.11233C9.81677 3.32196 9.23999 2.64643 8.49999 2.17115C7.75998 1.69587 6.88998 1.4422 6 1.4422C5.11002 1.4422 4.24002 1.69587 3.50001 2.17115C2.76001 2.64643 2.18323 3.32196 1.84262 4.11233C1.502 4.9027 1.41284 5.77241 1.58641 6.61149C1.75998 7.45056 2.18849 8.22132 2.81775 8.82631L6 11.8846ZM10.2427 9.84572L6 13.9241L1.75725 9.84572C0.918168 9.0391 0.346754 8.01142 0.115268 6.89264C-0.116218 5.77385 0.0026202 4.6142 0.456755 3.56034C0.91089 2.50647 1.67992 1.60572 2.66661 0.971987C3.6533 0.338253 4.81333 0 6 0C7.18667 0 8.3467 0.338253 9.33339 0.971987C10.3201 1.60572 11.0891 2.50647 11.5432 3.56034C11.9974 4.6142 12.1162 5.77385 11.8847 6.89264C11.6532 8.01142 11.0818 9.0391 10.2427 9.84572ZM0.750002 14.4187H11.25V15.8606H0.750002V14.4187Z" fill="black" fill-opacity="0.75"/>
+						</svg>
+						| п. Стрельна, Петергофское ш., д. 74, к. 6 
+					a(href="mailto: sales@svaisp.ru").contacts-section-mail
+						<svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M0.6 0H11.4C11.5591 0 11.7117 0.0607828 11.8243 0.168977C11.9368 0.277171 12 0.423914 12 0.576923V9.80769C12 9.9607 11.9368 10.1074 11.8243 10.2156C11.7117 10.3238 11.5591 10.3846 11.4 10.3846H0.6C0.44087 10.3846 0.288258 10.3238 0.175736 10.2156C0.0632141 10.1074 0 9.9607 0 9.80769V0.576923C0 0.423914 0.0632141 0.277171 0.175736 0.168977C0.288258 0.0607828 0.44087 0 0.6 0ZM10.8 2.445L6.0432 6.54115L1.2 2.43231V9.23077H10.8V2.445ZM1.5066 1.15385L6.0366 4.99731L10.5012 1.15385H1.5066Z" fill="black" fill-opacity="0.75"/>
+						</svg>
+						| sales@svaisp.ru
+				.contacts-section-faces
+					.contacts-section-faces-item
+						p.contacts-section-faces-item__title 
+							a(href="tel: +7 (921) 975-95-44") +7 (921) 975-95-44 
+							| — Сергей Юрьевич
+						p.contacts-section-faces-item__text Руководитель
+					.contacts-section-faces-item
+						p.contacts-section-faces-item__title 
+							a(href="tel: +7 (911) 026-70-95") +7 (911) 026-70-95 
+							| — Екатерина Александровна
+						p.contacts-section-faces-item__text Менеджер по работе с клиентами
+					.contacts-section-faces-item
+						p.contacts-section-faces-item__title 
+							a(href="tel: +7 (911) 026-70-95") +7 (911) 026-70-95 
+							| — Сергей Владимирович
+						p.contacts-section-faces-item__text Прораб
+			#contacts-map
+		a(href="#").contacts__link Как добраться на производство
+	.index-callOrder
+		.callOrder-wrap
+			form.callOrder-form(action="#")
+				.callOrder-form__title Остались вопросы?
+				.callOrder-form__subtitle Оставьте заявку, и мы вам перезвоним в ближайшее время
+				.callOrder-form-inpbox
+					input(type="text" name="" placeholder="Ваше имя").callOrder-form-inpbox__input
+					input(type="text" name="" placeholder="Телефон").callOrder-form-inpbox__input
+					button(type="submit").callOrder-form-inpbox__submit Перезвоните мне
+				p.callOrder-form__text Заполняя форму, вы даёте согласие на обработку <a href="#">персональных данных</a>

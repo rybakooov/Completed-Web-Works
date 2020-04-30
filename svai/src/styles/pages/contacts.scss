@@ -1,0 +1,210 @@
+.contacts{
+  max-width: 1440px;
+  padding: 0 20px;
+  margin: 0 auto;
+  & + .index-callOrder{
+    background: white;
+    margin-top: 150px;
+  }
+  &__title{
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 150%;
+    color: rgba(0, 0, 0, 0.75);
+  }
+  &-article{
+    margin-top: 42px;
+    display: flex;
+  }
+  &-section{
+    background: #FFFFFF;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    flex: 0 0 453px;
+    margin-right: 20px;
+    padding: 20px;
+    &-shedule{
+      display: flex;
+      align-items: center;
+      font-size: 20px;
+      line-height: 150%;
+      color: rgba(0, 0, 0, 0.75);
+      margin-bottom: 20px;
+      &__circle{
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #219653;
+        flex-shrink: 0;
+        margin-right: 16px;
+      }
+    }
+    &-address{
+      display: flex;
+      align-items: center;
+      font-size: 20px;
+      line-height: 150%;
+      color: rgba(0, 0, 0, 0.75);
+      margin-bottom: 20px;
+      svg{
+        flex-shrink: 0;
+        margin-right: 16px;
+      }
+    }
+    &-mail{
+      display: flex;
+      align-items: center;
+      font-size: 20px;
+      line-height: 150%;
+      color: rgba(0, 0, 0, 0.75);
+      svg{
+        flex-shrink: 0;
+        margin-right: 16px;
+      }
+    }
+    &-faces{
+      margin-top: 50px;
+      &-item{
+        &:not(:last-child){
+          padding-bottom: 20px;
+        }
+        &:not(:first-child){
+          padding-top: 20px;
+        }
+        &__title{
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 150%;
+          color: rgba(0, 0, 0, 0.75);
+          a{
+            display: inline;
+            transition: .2s;
+            @media screen and (min-width: 1024px){
+              &:hover{
+                color: #FFA500;
+              }
+            }
+          }
+        }
+        &__text{
+          font-size: 20px;
+          line-height: 150%;
+          color: rgba(0, 0, 0, 0.75);
+        }
+      }
+    }
+  }
+  &__link{
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 125%;
+    color: #47657A;
+    margin-top: 75px;
+    &:hover:after{
+      @media screen and (min-width: 1024px){
+        transform: rotate(360deg);
+      }
+    }
+    &:after{
+      content: '';
+      width: 30px;
+      height: 15px;
+      display: block;
+      transition: .3s;
+      transform-origin: center center;
+      background: url('../images/arr-news.svg');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin-left: 16px;
+    }
+  }
+}
+#contacts-map{
+  flex: 1;
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+/*
+  main.contacts
+  h1.contacts__title Контакты
+  article.contacts-article
+    section.contacts-section 
+    #contacts-map*/
+
+@media screen and (max-width: 1023px){
+  .contacts-article{
+    display: block;
+    margin: 50px -20px 0;
+  }
+  .contacts-section{
+    margin-right: 0;
+    margin-bottom: 20px;
+    display: flex;
+    &-faces{
+      margin-top: 0;
+      width: 50%;
+    }
+    &-top{
+      width: 50%;
+      padding-right: 30px;
+    }
+  }
+  .contacts__link{
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 125%;
+  }
+  #contacts-map{
+    height: 300px;
+  }
+  .contacts-section-shedule, .contacts-section-address, .contacts-section-mail{
+    font-size: 18px;
+    line-height: 125%;
+  }
+  .contacts-section-faces-item__title{
+    font-size: 18px;
+    line-height: 125%;
+  }
+  .contacts-section-faces-item__text{
+    font-size: 18px;
+    line-height: 125%;
+  }
+  .contacts-section-faces-item:not(:last-child){
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  }
+  .contacts-section-faces-item:not(:first-child){
+    padding-top: 30px;
+  }
+}
+
+@include w480{
+  .contacts-section{
+    flex-direction: column;
+    &-faces{
+      width: auto;
+      margin-top: 30px;
+    }
+    &-top{
+      width: auto;
+      padding-right: 0px;
+    }
+  }
+  #contacts-map{
+    height: 230px;
+  }
+  
+  .contacts-section-shedule, .contacts-section-address, .contacts-section-mail{
+    font-size: 16px;
+  }
+  .contacts-section-faces-item__title{
+    font-size: 16px;
+  }
+  .contacts-section-faces-item__text{
+    font-size: 16px;
+  }
+}
